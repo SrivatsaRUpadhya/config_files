@@ -20,7 +20,8 @@ git clone https://github.com/SrivatsaRUpadhya/config_files.git
 
 echo "Moving config files"
 # 3. move config files to appropriate locations
-mv config_files/ ~/
+exec `cp -r \.* ~/`
+exec `cd & rm -rf .git`
 echo "Config success"
 
 # 3. install applications
