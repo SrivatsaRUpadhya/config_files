@@ -1,0 +1,5 @@
+Xft.dpi:100
+Xft.antialias: true
+URxvt.transparent: true
+URxvt.shading:20
+#Xcursor.theme: DMZ-Black
