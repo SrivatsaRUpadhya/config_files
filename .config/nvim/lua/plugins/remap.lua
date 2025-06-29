@@ -1,3 +1,12 @@
+-- editor setup
+local set = vim.opt
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.relativenumber = true
+set.guicursor = ""
+
+-- Keybindings
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -28,10 +37,12 @@ vim.keymap.set('n', '<A-k>', ':m +1<CR>')
 vim.keymap.set('n', '<A-j>', ':m -2<CR>')
 
 --Format code using Prettier
-vim.keymap.set('n', '<leader>gp', vim.cmd.Prettier)
+vim.keymap.set('n', '<leader>gp', ':Neoformat<CR>')
+vim.keymap.set( 'n',   '<Space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true})
 
 --Esc using jk
 vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set('i', 'JK', '<Esc>')
 
 --Store in register
 vim.keymap.set('n', '<leader>yy', '"+yy')
@@ -45,3 +56,4 @@ vim.keymap.set('n', '<leader>CC', '"+CC')
 
 --lsp diaganostics display
 vim.keymap.set('n', '<leader>e',':lua vim.diagnostic.open_float(0, {scope="line"})<CR>')
+return {}
