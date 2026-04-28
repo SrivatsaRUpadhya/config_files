@@ -41,4 +41,7 @@ vim.opt.number=true
 vim.cmd.colorscheme('rose-pine')
 vim.cmd[[highlight Normal ctermbg=0 guibg=black]]
 vim.api.nvim_set_hl(0, 'Normal', {bg='none'})
-
+-- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { desc = 'Go to Implementation' })
+-- vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = true, desc = 'Go to References' })
+vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true, desc = 'Go to Implementation' })
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true, desc = 'Go to References' })

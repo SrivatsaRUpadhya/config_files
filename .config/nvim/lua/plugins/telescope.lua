@@ -13,6 +13,16 @@
         function() require("telescope.builtin").git_files({}) end,
         desc = "Find Git File",
       },
+      {
+        "<leader>pw",
+        function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ")}) end,
+        desc = "Grep search",
+      },
+      {
+        "<leader>ps",
+        function() require("telescope.builtin").live_grep({}) end,
+        desc = "Live grep search",
+      },
     },
     -- change some options
     opts = {

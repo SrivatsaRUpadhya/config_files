@@ -1,3 +1,4 @@
+vim = vim or { api = {} }
 return {
     "mason-org/mason-lspconfig.nvim",
     opts = {},
